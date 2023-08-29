@@ -1,4 +1,3 @@
-import React from 'react'
 import CustomerReview from "./components/CustomerReview"
 import Nav from './components/Nav'
 import PopularProducts from './components/PopularProducts'
