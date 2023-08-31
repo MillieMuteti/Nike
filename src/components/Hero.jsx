@@ -1,7 +1,8 @@
 import Button from "./Button"
 import {arrowRight} from '../../assets/icons/index'
-import {statistics} from '../../constants/index'
+import {statistics, shoes} from '../../constants/index'
 import {bigShoe1} from '../../assets/images/index'
+import {ShoeCard} from "./ShoeCard"
 
 const Hero = () => {
   return (
@@ -10,13 +11,13 @@ const Hero = () => {
     className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
     >
       <div
-      className="relative flex flex-col justify-center items-start w-full max-xl:paddding-x pt-28"
+      className="relative flex xl:w-2/5 flex-col justify-center items-start w-full max-xl:paddding-x pt-28"
       >
         <p
         className="text-xl font-montserrat text-coral-red"
         >Our Summer Collection</p>
         <h1
-        className="mt-10 font-palanquin text-8xl max-sm:text-[7px] max-sm:leading[82] font-bold">
+        className="mt-10 font-palanquin text-8xl max-sm:text-[7px] max-sm:leading[82px] font-bold">
           <span
           className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">
             The New Arrival</span> <br></br>
@@ -34,7 +35,7 @@ const Hero = () => {
           />
 
           <div
-           className="flex justify-start items-start w-full mt-20 gap-16"
+           className="flex justify-start flex-wrap items-start w-full mt-20 gap-16"
            >
           {statistics.map((stat) => (
             <div key={stat.label}>
@@ -52,15 +53,39 @@ const Hero = () => {
           </div>
 
       </div>
-      <div>
-        <img
+      <div
+      className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center">
+        <img       
          src= {bigShoe1}
          alt="shoe collection"
+         height={502}
+         width={610}
+         className="object-contain relative z-10"
           />
+          <div>
+            {shoes.map((shoe,) => 
+              (
+                <div key={shoe}>
+                  <ShoeCard
+                  imgURL={shoe}
+                  changeBigShoeImage = {()=>{}}
+                  bigShoeImage =''
+
+                  />
+
+                </div>
+              )
+            )}
+          </div>
       </div>
+      
 
     </section>
   )
 }
 
 export default Hero
+
+// 
+
+// relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center
