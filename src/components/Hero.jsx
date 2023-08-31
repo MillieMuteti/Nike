@@ -2,7 +2,9 @@ import Button from "./Button"
 import {arrowRight} from '../../assets/icons/index'
 import {statistics, shoes} from '../../constants/index'
 import {bigShoe1} from '../../assets/images/index'
-import {ShoeCard} from "./ShoeCard"
+import {ShoeCard} from '../components/ShoeCard'
+
+
 
 const Hero = () => {
   return (
@@ -45,7 +47,7 @@ const Hero = () => {
               </p>
              <p
               className="leading-7 font-montserrat text-slate-gray">
-              {stat.value}
+              {stat.value} 
               </p>
             </div>
           ))}
@@ -62,21 +64,19 @@ const Hero = () => {
          width={610}
          className="object-contain relative z-10"
           />
-          <div>
-            {shoes.map((shoe,) => 
-              (
-                <div key={shoe}>
-                  <ShoeCard
-                  imgURL={shoe}
-                  changeBigShoeImage = {()=>{}}
-                  bigShoeImage =''
+          {shoes.map((shoe, index) => (
+            <div key={index}>
+              <ShoeCard
+              index={index}
+              imgURL={shoe}
+              bigShoeImg=''
+              changeBigShoeImage = {()=>{}}
+              
+              />
 
-                  />
-
-                </div>
-              )
-            )}
-          </div>
+            </div>
+          ))}
+         
       </div>
       
 
@@ -85,7 +85,3 @@ const Hero = () => {
 }
 
 export default Hero
-
-// 
-
-// relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center
