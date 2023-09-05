@@ -1,8 +1,8 @@
 import Button from "./Button"
 import { useState } from "react"
-import {arrowRight} from '../../assets/icons/index'
-import {statistics, shoes} from '../../constants/index'
-import {bigShoe1} from '../../assets/images/index'
+import {arrowRight } from '../../assets/icons/index'
+import { statistics, shoes } from '../../constants/index'
+import { bigShoe1 } from '../../assets/images/index'
 import ShoeCard from "./ShoeCard"
 
 const Hero = () => {
@@ -90,4 +90,3 @@ const Hero = () => {
 export default Hero
 
 
-// 
