@@ -9,7 +9,7 @@ const SpecialOffer = () => {
         <img
           src={offer}
           alt='Shoe Promotion'
-          width={773}
+          width={773} 
           height={687}
           className='object-contain w-full'
         />
